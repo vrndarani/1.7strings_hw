@@ -15,7 +15,17 @@ public class Main {
 
 
         fullName = "Иванов Семён Семёнович";
-        String fullNameReplace = fullName.replace("ё", "е");
-        System.out.println("Employee's name data: " + fullNameReplace);
+        System.out.print("Данные ФИО сотрудника — ");
+        String[] words = fullName.split(" ");
+        for (int i = 0; i < words.length; i++) {
+            if (words[i].contains("ё")) {
+                words[i] = words[i].replace("ё", "е");
+            }
+            if (i == words.length - 1) {
+                System.out.print(words[i]);
+            } else {
+                System.out.print(words[i] + " ");
+            }
+        }
     }
 }
